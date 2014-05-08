@@ -16,11 +16,11 @@ par(bg="transparent")
 # set a 2x2 plot
 par(mfrow=c(2,2))
 
-# hist on topleft
-hist(data$Global_active_power, col="red", main="Golbal Active Power", xlab="Golbal Active Power (kilowatts)")
+# plot on topleft
+plot(data$DateTime, data$Global_active_power, ylab="Golbal Active Power",type="l")
 
 # plot on topright
-plot(data$DateTime, data$Global_active_power, xlab="datetime", ylab="Golbal Active Power (kilowatts)",type="l")
+plot(data$DateTime, data$Voltage, xlab="datetime", ylab="Voltage",type="l")
 
 # plot on bottonleft
 plot(data$DateTime, data$Sub_metering_1, ylab="Enery sub metering",type="l",xlab="")
